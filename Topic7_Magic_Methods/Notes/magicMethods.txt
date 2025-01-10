@@ -1,0 +1,7 @@
+The use of double underscores around names in Python (e.g., __name__, __init__, __call__, etc.) is a part of Python's "special methods" or "magic methods" convention. 
+
+These are system-defined names that have a special meaning and behavior in the Python language. 
+
+The double underscores are used to indicate that the name is reserved for Python's internal use, 
+
+and that it serves a specific, predefined role in the language.

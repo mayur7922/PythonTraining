@@ -1,0 +1,46 @@
+-- Defining function calling in the module in a way that they will not get
+called after getting called in some other file
+
+1. __name__ Special Variable
+In Python, every module (file) has a special built-in variable called __name__. 
+The value of __name__ depends on how the script is being executed:
+
+When you run a script directly, like python file1.py, the value of __name__ will be set to "__main__".
+
+When you import a script as a module, like import file1 in another file (file2.py), the value of __name__ will be set to the name of the file (in this case, 'file1').
+
+2. if __name__ == "__main__": Block
+This conditional check is used to determine whether the script is being executed directly (as the main program) or whether it is being imported as a module into another script.
+
+-- modules
+
+In Python, modules are files containing Python code that define functions, classes, and variables, or contain runnable code.
+Importing and using modules allows you to reuse code across multiple programs or scripts, making your code cleaner and more modular.
+
+1. Importing a Module
+To use a module, you first need to import it using the import statement. There are several ways to import modules in Python:
+
+Basic import
+
+# Import the math module
+import math  
+
+# Import only the sqrt function from the math module
+from math import sqrt  
+
+# Import All Functions
+from math import *
+
+# Now you can use functions from the math module
+result = math.sqrt(16)
+print(result)  # Output: 4.0
+
+2. Module Search Path (sys.path)
+When you import a module, Python searches for it in specific locations. These locations are stored in a list called sys.path. By default, it includes:
+
+The directory containing the script you are running.
+Standard library directories (like /usr/lib/python3.8).
+Any directories you have added manually (like via the PYTHONPATH environment variable).
+
+import sys
+print(sys.path)

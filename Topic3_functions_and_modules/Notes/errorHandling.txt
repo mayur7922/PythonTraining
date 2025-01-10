@@ -1,0 +1,46 @@
+syntax:
+
+def safe_divide(a, b):
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero!")
+    else:
+        print(f"The result is {result}")
+    finally:
+        print("Execution finished.")
+
+
+1. try block:
+The try block is used to wrap code that might raise an exception. 
+If an error occurs inside the try block, the remaining code in the block is skipped
+and Python looks for an except block to handle the error.
+
+2. except block:
+The except block follows the try block and is used to catch and handle exceptions. 
+You can specify the type of exception you want to handle (e.g., ZeroDivisionError, FileNotFoundError), 
+or you can use a generic except to catch any exception.
+
+-- specific error handling
+
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+
+-- generic error handling
+
+try:
+    result = 10 / 0
+except:
+    print("An error occurred.")  # Not ideal
+
+3. else block:
+The else block is executed if no exceptions are raised in the try block. 
+It allows you to run code that should only execute when the try block runs without errors.
+
+finally block:
+The finally block is executed no matter what, 
+whether or not an exception occurs. 
+It is typically used for clean-up actions like closing files, releasing resources, 
+or other tasks that must always happen after the try block is executed.
